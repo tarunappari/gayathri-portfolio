@@ -1,0 +1,35 @@
+.curved-loop-jacket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+.curved-loop-svg {
+  user-select: none;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 100 / 12;
+  overflow: visible;
+  display: block;
+  font-size: 5rem;
+  fill: #515151 !important;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.curved-loop-svg text {
+  fill: #626262 !important;
+}
+
+.curved-loop-svg .custom-text-style {
+  fill: #7d7d7d !important;
+  font-family: 'spacegrotes', sans-serif;
+}

@@ -1,0 +1,215 @@
+// Our Journey Starts Here Section
+.journeySection {
+  position: relative;
+  padding: 8rem;
+  overflow: hidden;
+  min-height: 150vh;
+
+  h3 {
+    font-size: 1.75rem;
+  }
+  p {
+    text-align: start;
+    font-size: 1.25rem;
+  }
+}
+
+// Section Header
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 1rem auto;
+  text-align: center;
+  width: 100%;
+}
+
+.sectionSubtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  text-align: center;
+}
+
+.leftTitle{
+
+  h3{
+    position: inherit;
+    left: 4rem;
+    font-size: 1.5rem;
+  }
+}
+
+.rightContent{
+  border: 2px solid red;
+  padding: 2rem ;
+}
+
+
+
+// Responsive Design
+@media (max-width: 1200px) {
+  .journeySection {
+    padding: 6rem 0;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .stepsContainer {
+    gap: 1.5rem;
+  }
+
+  .step {
+    padding: 1.75rem 0.75rem;
+  }
+
+  .stepIcon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1.5rem;
+  }
+
+  .icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .stepTitle {
+    font-size: 1.2rem;
+  }
+
+  .stepDescription {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .journeySection {
+    padding: 5rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 4rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.25rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .stepsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .step {
+    padding: 2rem 1rem;
+  }
+
+  .stepConnector {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .journeySection {
+    padding: 4rem 0;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1rem;
+  }
+
+  .stepsContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 400px;
+  }
+
+  .step {
+    padding: 1.5rem 1rem;
+  }
+
+  .stepIcon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .stepPhase {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .stepTitle {
+    font-size: 1.1rem;
+  }
+
+  .stepDescription {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .journeySection {
+    padding: 3rem 0;
+  }
+
+  .sectionHeader {
+    margin-bottom: 3rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .step {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .stepIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .stepPhase {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .stepTitle {
+    font-size: 1rem;
+  }
+
+  .stepDescription {
+    font-size: 0.8rem;
+  }
+}

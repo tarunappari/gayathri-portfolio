@@ -1,107 +1,18 @@
-.container {
-  position: absolute;
-  background: transparent;
-  z-index: 999;
-  width: 100%;
-  background-color: transparent;
+.navContainer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  top: 50px; /* Account for top slider */
+  gap: 1rem;
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  margin: 0 auto;
 
-  .title {
-    a:hover::after {
-      width: 0% !important;
-    }
+  span{
+    color: white;
+    font-size: 1rem;
   }
 
-  & > div{
-    display: flex;
-    gap: 1rem;
-  }
-
-  svg {
-    transform: scale(1.1);
-  }
-
-  a {
-    color: var(--para);
-    font-size: 1.1rem;
-    position: relative; /* Needed for absolute positioning of ::after */
-    text-decoration: none;
-    transition: color 0.25s ease-in-out;
-  }
-
-  a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px; /* Adjust distance below text */
-    width: 0%; /* Start with zero width */
-    height: 2px; /* Thickness of the underline */
-    background-color: var(--para);
-    transition: width 0.3s ease-in-out;
-  }
-
-  a:hover {
-    color: var(--black);
-  }
-
-  a:hover::after {
-    width: 100%; /* Expands fully on hover */
-  }
-
-  .active {
-    color: var(--black);
-  }
-
-  .active::after {
-    width: 100%;
-    background-color: var(--black);
-  }
-
-  .whiteLinks a {
-    color: white !important;
-  }
-
-  .whiteLinks a::after {
-    background-color: white !important;
-  }
-
-  .whiteLinks a:hover {
-    color: white !important;
-  }
-
-  .whiteLinks .active {
-    color: white !important;
-  }
-
-  .whiteLinks .active::after {
-    background-color: white !important;
-  }
-}
-
-// Mobile Responsive Styles
-@media (max-width: 768px) {
-  .container {
-    top: 45px; /* Adjust for smaller slider height */
-
-    .title {
-      img{
-        width: 13rem;
-      }
-    }
-
-    a{
-      font-size: 1rem;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .container{
-    top: 40px; /* Adjust for smallest slider height */
-    flex-direction: column;
+  button{
+    position: relative;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
   }
 }
