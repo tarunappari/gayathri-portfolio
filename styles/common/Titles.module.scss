@@ -1,0 +1,26 @@
+ .mainTitles {
+    padding-left: 5rem;
+    position: relative;
+    top: 3rem;
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      p {
+        font-size: 2rem;
+        div {
+          color: #12d5bf !important;
+        }
+      }
+      i {
+        display: inline-block;
+        width: 5rem;
+        height: 0.05rem;
+        background-color: #12d5bf;
+        margin-bottom: 1rem;
+      }
+    }
+    span {
+      color: white;
+    }
+  }

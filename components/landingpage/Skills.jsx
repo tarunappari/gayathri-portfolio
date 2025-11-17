@@ -6,7 +6,7 @@ import DecryptedText from "../ui/reactbits/DecryptedText";
 import LetterGlitch from "../LetterGlitch";
 import SkillCard from "./sub/SkillCard";
 import GlassIcons from "../ui/reactbits/GlassIconsComponent";
-import { color } from "framer-motion";
+import Titles from "../common/Titles";
 
 const items = [
   {
@@ -45,30 +45,7 @@ const Skills = () => {
         />
       </div> */}
       <div className={styles.skillContent}>
-        <div className={styles.titles}>
-          <h2>
-            <Shuffle
-              text="Proof of Skill"
-              shuffleDirection="right"
-              duration={0.35}
-              animationMode="evenodd"
-              shuffleTimes={1}
-              ease="power3.out"
-              stagger={0.03}
-              threshold={0.1}
-              triggerOnce={true}
-              triggerOnHover={true}
-              respectReducedMotion={true}
-            />
-            <i></i>
-          </h2>
-          <DecryptedText
-            text="Experience shows what I’ve done. Certifications prove I do it right."
-            animateOn="view"
-            revealDirection="center"
-            className={styles.subTitle}
-          />
-        </div>
+        <Titles title={'Who I am!'} subTitle={'Experience shows what I’ve done. Certifications prove I do it right.'} />
 
         <div className={styles.skillsSection}>
           <div>

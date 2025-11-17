@@ -4,7 +4,8 @@ import { ArrowRight, Link, Zap } from "lucide-react";
 import { cva } from "class-variance-authority";
 import { Slot } from "@radix-ui/react-slot";
 import * as React from "react";
-import styles from '@/styles/landingpage/Experience.module.scss'
+import styles from "@/styles/landingpage/Experience.module.scss";
+import Image from "next/image";
 
 // Utility function for class names
 const cn = (...inputs) => {
@@ -105,7 +106,7 @@ const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
 CardHeader.displayName = "CardHeader";
 
 const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
-  <h3
+  <h1
     ref={ref}
     className={cn(
       "text-2xl font-semibold leading-none tracking-tight",
@@ -248,7 +249,7 @@ export default function RadialOrbitalTimeline({ timelineData }) {
 
   return (
     <div
-      className={`w-full h-screen flex flex-col items-center justify-center bg-black overflow-hidden ${styles.container}`}
+      className={`w-full h-screen flex flex-col items-center justify-center  overflow-hidden ${styles.container}`}
       ref={containerRef}
       onClick={handleContainerClick}
     >
@@ -311,7 +312,7 @@ export default function RadialOrbitalTimeline({ timelineData }) {
 
                 <div
                   className={`
-                  w-10 h-10 rounded-full flex items-center justify-center
+                  w-10 h-10 ${styles.imgContainer} rounded-full flex items-center justify-center
                   ${
                     isExpanded
                       ? "bg-white text-black"
@@ -331,33 +332,46 @@ export default function RadialOrbitalTimeline({ timelineData }) {
                   ${isExpanded ? "scale-150" : ""}
                 `}
                 >
-                  <Icon size={16} />
+                  {/* <Icon size={16} /> */}
+                  <Image
+                    src={item.image}
+                    alt={item.company}
+                    width={50}
+                    height={50}
+                    className="object-contain"
+                  />
                 </div>
 
                 <div
                   className={`
-                  absolute top-12 ${styles.iconSubText} whitespace-nowrap
+                  absolute top-17 ${styles.iconSubText} whitespace-nowrap
                   text-xs font-semibold tracking-wider
                   transition-all duration-300
-                  ${isExpanded ? `${
-                    styles.titleWhenExpanded
-                  }` : "text-white/70 "}
+                  ${
+                    isExpanded
+                      ? `${styles.titleWhenExpanded}`
+                      : "text-white/70 "
+                  }
                 `}
                 >
-                  <p>{item.company}</p>
-                  <p>{item.date}</p>
+                  <p className={styles.companyName}>{item.company}</p>
+                  <p className={styles.date} >{item.date}</p>
                 </div>
 
                 {isExpanded && (
-                  <Card className={`absolute top-30 left-1/2 -translate-x-1/2 w-84 bg-black/90 backdrop-blur-lg border-white/30 shadow-xl shadow-white/10 overflow-visible ${styles.cardContainer}`}>
+                  <Card
+                    className={`absolute top-35 left-1/2 -translate-x-1/2 w-84 bg-black/90 backdrop-blur-lg border-white/30 shadow-xl shadow-white/10 overflow-visible ${styles.cardContainer}`}
+                  >
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-px h-3 bg-white/50"></div>
                     <CardHeader className="pb-2">
                       <CardTitle className={`${styles.cardTitle} text-sm mt-2`}>
                         <h2>{item.title}</h2>
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className={`text-xs text-white/80 ${styles.cardContent}`}>
-                      <p>{item.content}</p>
+                    <CardContent
+                      className={`text-xs text-white/80 ${styles.cardContent}`}
+                    >
+                      <p >{item.content}</p>
                     </CardContent>
                   </Card>
                 )}

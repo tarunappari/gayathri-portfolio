@@ -11,8 +11,16 @@ import {
 } from "lucide-react";
 import RadialOrbitalTimeline from "../ui/radialOrbit";
 import styles from "@/styles/landingpage/Experience.module.scss";
-import Shuffle from "../ui/reactbits/ShuffleText";
-import DecryptedText from "../ui/reactbits/DecryptedText";
+import wipro from "@/public/assets/xp/wipro.png";
+import cycops from "@/public/assets/xp/cycops.png";
+import phillips from "@/public/assets/xp/phillips.png";
+import pwc from "@/public/assets/xp/pwc.png";
+import societe from "@/public/assets/xp/Societe.png";
+import traveloka from "@/public/assets/xp/traveloka.png";
+import aujis from "@/public/assets/xp/aujis.png";
+import girlImg from "@/public/assets/xp/xp.png";
+import Image from "next/image";
+import Titles from "../common/Titles";
 
 export const timelineData = [
   {
@@ -24,19 +32,21 @@ export const timelineData = [
       "Leading penetration testing efforts, mentoring engineers, and embedding security at scale.",
     category: "Leadership",
     icon: Briefcase,
+    image: wipro,
     relatedIds: [2],
     status: "current",
     energy: 100,
   },
   {
     id: 2,
-    company: "Société Générale",
+    company: "Societe Generale",
     title: "Cyber Security Consultant",
     date: "2023–2024",
     content:
       "Cloud & Active Directory security reviews, compliance guardrails, and secure architecture design.",
     category: "Consulting",
     icon: Shield,
+    image: societe,
     relatedIds: [1, 3],
     status: "completed",
     energy: 90,
@@ -50,6 +60,7 @@ export const timelineData = [
       "Secured Kubernetes clusters, APIs, and CI/CD pipelines through DevSecOps integration.",
     category: "DevSecOps",
     icon: Layers,
+    image: pwc,
     relatedIds: [2, 4],
     status: "completed",
     energy: 85,
@@ -63,6 +74,7 @@ export const timelineData = [
       "Threat modeling and risk analysis across distributed cloud infrastructure.",
     category: "Cloud Security",
     icon: Cloud,
+    image: traveloka,
     relatedIds: [3, 5],
     status: "completed",
     energy: 75,
@@ -76,6 +88,7 @@ export const timelineData = [
       "Performed application pentesting across 90+ enterprise applications.",
     category: "Pentesting",
     icon: Lock,
+    image: phillips,
     relatedIds: [4, 6],
     status: "completed",
     energy: 60,
@@ -88,18 +101,20 @@ export const timelineData = [
     content: "Tailored security solutions and risk mitigation strategies.",
     category: "Consulting",
     icon: Radar,
+    image: aujis,
     relatedIds: [5, 7],
     status: "completed",
     energy: 45,
   },
   {
     id: 7,
-    company: "Cucops India",
+    company: "Cycops India",
     title: "InfoSec Analyst",
     date: "2014–2016",
     content: "Automated vulnerability management and awareness programs.",
     category: "Security Operations",
     icon: UserCheck,
+    image: cycops,
     relatedIds: [6],
     status: "completed",
     energy: 30,
@@ -109,31 +124,16 @@ export const timelineData = [
 const Experience = () => {
   return (
     <div className={styles.mainContainer}>
-      <div className={styles.mainTitles}>
-        <h2>
-          <Shuffle
-            text="The Journey So Far"
-            shuffleDirection="right"
-            duration={0.35}
-            animationMode="evenodd"
-            shuffleTimes={1}
-            ease="power3.out"
-            stagger={0.03}
-            threshold={0.1}
-            triggerOnce={true}
-            triggerOnHover={true}
-            respectReducedMotion={true}
-          />
-          <i></i>
-        </h2>
-        <DecryptedText
-          text="Every company, every test, every exploit fixed — a story of learning and resilience."
-          animateOn="view"
-          revealDirection="center"
-          className={styles.subTitle}
-        />
+      <Titles title={'The Journey So Far'} subTitle={'Every company, every test, every exploit fixed — a story of learning and resilience.'} />
+      <div className={styles.gridDivider}>
+        <div className={styles.xpImgContainer}
+        >
+          <Image src={girlImg} alt="img" />
+        </div>
+        <div>
+          <RadialOrbitalTimeline timelineData={timelineData} />
+        </div>
       </div>
-      <RadialOrbitalTimeline timelineData={timelineData} />
     </div>
   );
 };

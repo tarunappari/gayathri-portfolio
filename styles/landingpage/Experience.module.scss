@@ -1,48 +1,60 @@
 .mainContainer {
+  position: relative;
 
-  .mainTitles {
-    padding-left: 5rem;
-    margin-top: 5rem;
-    h2 {
+  .gridDivider {
+    display: grid;
+    grid-template-columns: 25% 75%;
+
+    .xpImgContainer{
       display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 1rem;
-      p {
-        font-size: 2rem;
-        div {
-          color: #12d5bf !important;
-        }
+      position: relative;
+      animation: floatDiagonal 6s ease-in-out infinite;
+      img{
+        width: 30rem;
+        position: absolute;
+        left: 10rem;
       }
-      i {
-        display: inline-block;
-        width: 5rem;
-        height: 0.05rem;
-        background-color: #12d5bf;
-        margin-bottom: 1rem;
-      }
-    }
-    span{
-      color: white;
     }
   }
 
   .container {
-
+    margin-top: -5rem;
     .iconContainer {
       .iconSubText {
         margin-right: 2rem;
 
         p {
           text-align: center;
-          font-size: 0.85rem;
+          font-size: 0.9rem;
+        }
+
+        .date {
+          font-size: 0.8rem;
         }
       }
     }
 
     .titleWhenExpanded {
       color: white;
-      margin-top: 1rem;
-      margin-left: -4rem;
+      margin-top: 1.5rem;
+      margin-left: -1rem;
+      .companyName {
+        color: white;
+        font-size: 1.5rem;
+      }
+      .date {
+        margin-top: 0.3rem;
+        font-size: 1rem;
+      }
+    }
+
+    .imgContainer {
+      padding: 2rem !important;
+      img {
+        min-width: 5rem !important;
+      }
     }
 
     .cardContainer {
@@ -64,5 +76,21 @@
         }
       }
     }
+  }
+}
+
+@keyframes floatDiagonal {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -15px);
+  }
+  50% {
+    transform: translate(0, -20px);
+  }
+  75% {
+    transform: translate(-10px, -15px);
   }
 }

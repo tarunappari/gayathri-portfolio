@@ -1,16 +1,14 @@
 "use client";
 import React from "react";
 import styles from "@/styles/landingpage/About.module.scss";
-import Shuffle from "../ui/reactbits/ShuffleText";
-import DecryptedText from "../ui/reactbits/DecryptedText";
 import about from "@/public/assets/gayathri/about.webp";
 import Image from "next/image";
 import FallingText from "../ui/reactbits/FallingText";
 import BlurText from "../ui/reactbits/BlurText";
 import Particles from "../ui/reactbits/ParticlesBg";
+import Titles from "../common/Titles";
 
 const About = () => {
- 
   return (
     <div className={styles.containerAbout}>
       <div className={styles.bg}>
@@ -27,30 +25,12 @@ const About = () => {
         />
       </div>
       <div className={styles.leftContainer}>
-        <div>
-          <h2>
-            <Shuffle
-              text="Who i Am"
-              shuffleDirection="right"
-              duration={0.35}
-              animationMode="evenodd"
-              shuffleTimes={1}
-              ease="power3.out"
-              stagger={0.03}
-              threshold={0.1}
-              triggerOnce={true}
-              triggerOnHover={true}
-              respectReducedMotion={true}
-            />
-            <i></i>
-          </h2>
-          <DecryptedText
-            text="Securing the digital world, one vulnerability at a time."
-            animateOn="view"
-            revealDirection="center"
-            className={styles.subTitle}
-          />
-        </div>
+        <Titles
+          title={"Who i Am"}
+          subTitle={
+            "Securing the digital world, one vulnerability at a time."
+          }
+        />
         <div className={styles.description}>
           <p>
             With over a decade of hands-on experience in cybersecurity and
