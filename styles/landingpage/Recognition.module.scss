@@ -1,4 +1,36 @@
-.container{
+.container {
   min-height: 100vh;
-  border: 2px solid red;
+
+  .titles {
+    padding-top: 2rem;
+  }
+
+  .recognition {
+    padding-left: 5rem;
+    margin-top: 4rem;
+
+    h2 {
+      font-size: 1.25rem;
+
+      span {
+        color: #12d5bf;
+        font-weight: 600;
+      }
+    }
+  }
+  .contribution {
+    h2 {
+      p {
+        font-size: 1.25rem;
+      }
+      i {
+        width: 3rem;
+      }
+    }
+
+    .musicCardContainer {
+      margin-top: 5rem;
+      padding-left: 5rem;
+    }
+  }
 }

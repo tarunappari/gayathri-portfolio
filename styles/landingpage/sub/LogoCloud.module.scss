@@ -1,0 +1,151 @@
+// Main container
+.logoCloud {
+  width: 80vw;
+  margin-top: 1rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-left: 1px solid #333333;
+  border-right: 1px solid #333333;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Top and bottom borders
+.topBorder,
+.bottomBorder {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  pointer-events: none;
+}
+
+.topBorder {
+  top: -1px;
+  border-top: 1px solid #333333;
+}
+
+.bottomBorder {
+  bottom: -1px;
+  border-bottom: 1px solid #333333;
+}
+
+// Base logo card
+.logoCardBase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  padding: 2rem 1rem;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+}
+
+// Logo image
+.logoImage {
+  height: 5rem;
+  pointer-events: none;
+  user-select: none;
+
+  @media (min-width: 768px) {
+    height: 1.25rem;
+  }
+}
+
+// Plus icons
+.plusIcon {
+  position: absolute;
+  z-index: 10;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #b7b6b6;
+}
+
+.plusBottomRight {
+  right: -9.5px;
+  bottom: -9.5px;
+}
+
+.plusBottomLeft {
+  left: -15.5px;
+  bottom: -15.5px;
+}
+
+.hideMobile {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.showMobileOnly {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+// Individual card styles
+.logoCard {
+  position: relative;
+}
+
+.card1 {
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  background-color: #000000;
+}
+
+.card2 {
+  border-bottom: 1px solid #333333;
+  background-color: #000000;
+
+  @media (min-width: 768px) {
+    border-right: 1px solid #333333;
+  }
+}
+
+.card3 {
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  background-color: #000000;
+}
+
+.card4 {
+  border-bottom: 1px solid #333333;
+  background-color: #000000;
+}
+
+.card5 {
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  background-color: #000000;
+
+  @media (min-width: 768px) {
+    border-bottom: none;
+  }
+}
+
+.card6 {
+  border-bottom: 1px solid #333333;
+  background-color: #000000;
+
+  @media (min-width: 768px) {
+    border-right: 1px solid #333333;
+    border-bottom: none;
+  }
+}
+
+.card7 {
+  border-right: 1px solid #333333;
+  background-color: #000000;
+}
+
+.card8 {
+  background-color: #000000;
+}
