@@ -1,22 +1,18 @@
 "use client";
-import React, { Profiler } from "react";
+import React from "react";
 import styles from "@/styles/landingpage/HeroSection.module.scss";
-import FallingStars from "../ui/fallingstars";
 import Shuffle from "../ui/reactbits/ShuffleText";
 import DecryptedText from "../ui/reactbits/DecryptedText";
-import gayathri from "@/public/assets/gayathri/gayathri.png";
-import gayathri2 from "@/public/assets/gayathri/gayathri2.png";
+import gayathri from "@/public/assets/gayathri/gayathri.webp";
+import gayathri2 from "@/public/assets/gayathri/gayathri2.webp";
 import Image from "next/image";
 import { IconBrandGithub,IconBrandLinkedin,IconPhone  } from "@tabler/icons-react";
-import CurvedLoop from "../ui/reactbits/CurvedLoopText";
-import Particles from "../ui/reactbits/ParticlesBg";
 
 const HeroSection = () => {
   
   return (
     <div className={styles.containerHero}>
-      <div className={styles.bg}>
-        {/* <FallingStars /> */}
+      {/* <div className={styles.bg}>
         <Particles
           particleColors={["#ffffff", "#ffffff"]}
           particleCount={200}
@@ -27,7 +23,7 @@ const HeroSection = () => {
           alphaParticles={true}
           disableRotation={false}
         />
-      </div>
+      </div> */}
       <div className={styles.content}>
         <h2 className={`gradientText ${styles.title}`}>Hey! I'm</h2>
         <Shuffle
@@ -42,6 +38,7 @@ const HeroSection = () => {
           triggerOnce={true}
           triggerOnHover={true}
           respectReducedMotion={true}
+          className={styles.shufleTextContainer}
         />
         <div
           className={styles.subContent}
@@ -57,6 +54,7 @@ const HeroSection = () => {
             text="Security-focused engineer with 10+ years in ethical hacking, DevSecOps, and cloud security."
             animateOn="view"
             revealDirection="center"
+            className={styles.subSubTitle}
           />
         </div>
         <div className={styles.profileImg}>

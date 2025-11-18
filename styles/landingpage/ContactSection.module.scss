@@ -1,7 +1,11 @@
 .mainContainer {
   margin-top: 2rem;
   position: relative;
-  min-height: 85vh;
+  min-height: 110vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
 
   .darkVeil {
     width: 100%;
@@ -9,6 +13,7 @@
     position: absolute;
     transform: rotate(180deg);
     z-index: -9;
+    bottom: 0;
   }
 
   .credits {
@@ -16,7 +21,7 @@
     bottom: 2rem;
     left: 3rem;
 
-    h2{
+    h2 {
       font-size: 0.85rem;
     }
 
@@ -34,7 +39,15 @@
   gap: 1rem;
 
   .leftContainer {
-    padding-top: 2rem;
+    padding-top: 5rem;
+
+    .titleSection {
+      margin-bottom: 1rem;
+      & > div {
+        padding-left: 0 !important;
+        top: 0 !important;
+      }
+    }
 
     & > div {
       display: flex;

@@ -111,6 +111,15 @@ $shadow-color: #2a2a2a;
   box-shadow: 0 0 0 transparent;
 }
 
+@media (max-width: 1600px) {
+  .card {
+    width: 460px;
+
+    /* EXACT same style as your screenshot */
+    box-shadow: 6px 6px 0 $shadow-color;
+  }
+}
+
 /* RESPONSIVE */
 @media (max-width: 420px) {
   .card {

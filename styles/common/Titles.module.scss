@@ -24,3 +24,14 @@
       color: white;
     }
   }
+
+
+  @media (max-width: 1600px){
+  .mainTitles {
+    h2 {
+      p {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}

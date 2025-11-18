@@ -5,14 +5,12 @@ import about from "@/public/assets/gayathri/about.webp";
 import Image from "next/image";
 import FallingText from "../ui/reactbits/FallingText";
 import BlurText from "../ui/reactbits/BlurText";
-import Particles from "../ui/reactbits/ParticlesBg";
 import Titles from "../common/Titles";
 
 const About = () => {
   return (
     <div className={styles.containerAbout}>
-      <div className={styles.bg}>
-        {/* <FallingStars /> */}
+      {/* <div className={styles.bg}>
         <Particles
           particleColors={["#ffffff", "#ffffff"]}
           particleCount={200}
@@ -23,7 +21,7 @@ const About = () => {
           alphaParticles={true}
           disableRotation={false}
         />
-      </div>
+      </div> */}
       <div className={styles.leftContainer}>
         <div className={styles.titlesAboutContainer}>
           <Titles
@@ -86,33 +84,35 @@ const About = () => {
               />
             </div>
           </div>
-          <FallingText
-            text={`☁️ 🔐 🌐 🧩 🤖 🧠 🧑‍💻 🚨 🧱 🕵️‍♂️ 🧰 🧾 🛡️ 📊 🖧`}
-            highlightWords={[
-              "☁️",
-              "🔐",
-              "🌐",
-              "🧩",
-              "🤖",
-              "🧠",
-              "🧑‍💻",
-              "🚨",
-              "🧱",
-              "🕵️‍♂️",
-              "🧰",
-              "🧾",
-              "🛡️",
-              "📊",
-              "🖧",
-            ]}
-            highlightClass="highlighted"
-            trigger="hover"
-            backgroundColor="transparent"
-            wireframes={false}
-            gravity={0.56}
-            fontSize="2rem"
-            mouseConstraintStiffness={0.9}
-          />
+          <div className={styles.fallingTextContainer}>
+            <FallingText
+              text={`☁️ 🔐 🌐 🧩 🤖 🧠 🧑‍💻 🚨 🧱 🕵️‍♂️ 🧰 🧾 🛡️ 📊 🖧`}
+              highlightWords={[
+                "☁️",
+                "🔐",
+                "🌐",
+                "🧩",
+                "🤖",
+                "🧠",
+                "🧑‍💻",
+                "🚨",
+                "🧱",
+                "🕵️‍♂️",
+                "🧰",
+                "🧾",
+                "🛡️",
+                "📊",
+                "🖧",
+              ]}
+              highlightClass="highlighted"
+              trigger="hover"
+              backgroundColor="transparent"
+              wireframes={false}
+              gravity={0.56}
+              fontSize="2rem"
+              mouseConstraintStiffness={0.9}
+            />
+          </div>
         </div>
       </div>
       <div className={styles.rightContainer}>

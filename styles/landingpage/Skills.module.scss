@@ -6,27 +6,6 @@
     color: white;
   }
 
-  // .skillsBg {
-  //   position: absolute;
-  //   & > div {
-  //     position: absolute;
-  //     min-height: 150vh;
-  //     width: 100%;
-  //     filter: blur(1px);
-  //     z-index: -1;
-
-  //     &::after {
-  //       content: "";
-  //       position: absolute;
-  //       top: 0;
-  //       left: 0;
-  //       width: 100%;
-  //       height: 100%;
-  //       background: rgba(0, 0, 0, 0.6);
-  //     }
-  //   }
-  // }
-
   .skillContent {
     padding: 1rem;
     padding-top: 8rem;
@@ -68,7 +47,6 @@
   }
 
   .certificatesContent {
-    
     .titles {
       padding-left: 5rem;
       h2 {
@@ -97,6 +75,24 @@
       & > div {
         gap: 7rem;
         padding: 5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .container {
+
+    .skillsSection {
+      padding-top: 2rem;
+      & > div {
+        & > div {
+          padding: 2rem;
+          margin-top: 1rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 1rem;
+        }
       }
     }
   }

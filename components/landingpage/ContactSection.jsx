@@ -16,20 +16,21 @@ import DarkVeil from "../ui/reactbits/DarkVeil";
 const ContactSection = () => {
   return (
     <div className={styles.mainContainer}>
-      <div className={styles.darkVeil}>
+      {/* <div className={styles.darkVeil}>
         <DarkVeil />
-      </div>
-      <div>
-        <Titles
-          title={"Let’s Collaborate"}
-          subTitle={
-            "Whether it’s hardening systems or brainstorming over zero-days — let’s connect."
-          }
-        />
-      </div>
+      </div> */}
+
       <div className={styles.container}>
         <div className={styles.leftContainer}>
           <div>
+            <div className={styles.titleSection}>
+              <Titles
+                title={"Let’s Collaborate"}
+                subTitle={
+                  "Whether it’s hardening systems or brainstorming over zero-days — let’s connect."
+                }
+              />
+            </div>
             <div>
               <span className={styles.icon}>
                 <IconMailOpened stroke={2} color="#12d5bf" />
@@ -57,7 +58,9 @@ const ContactSection = () => {
 
       <div className={styles.credits}>
         <h2> © 2025 Gayathri Rachakonda · All Rights Reserved</h2>
-        <h2>Built with 🖤 by <span>Tarun Appari</span></h2>
+        <h2>
+          Built with 🖤 by <span>Tarun Appari</span>
+        </h2>
       </div>
     </div>
   );

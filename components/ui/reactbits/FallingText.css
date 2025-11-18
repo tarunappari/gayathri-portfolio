@@ -2,10 +2,11 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 100%;
+  height: 20rem;
   cursor: pointer;
   text-align: center;
-  padding-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 1rem;
 }
 
 .falling-text-target {
@@ -16,6 +17,7 @@
   display: inline-block;
   margin: 0 2px;
   user-select: none;
+  z-index: 199;
 }
 
 .highlighted {
@@ -27,5 +29,4 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
 }
