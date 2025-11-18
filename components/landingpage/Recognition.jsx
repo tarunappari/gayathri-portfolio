@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import styles from "@/styles/landingpage/Recognition.module.scss";
-import Titles from "../common/Titles";
+import { TitlesWithI } from "../common/Titles";
 import AnimatedContent from "../animations/ReactBitsAnimation";
 import Image from "next/image";
 import NvidiaLogo from "@/public/assets/bug/gogle.webp";
@@ -41,7 +41,7 @@ const Recognition = () => {
         delay={0.3}
       >
         <div className={styles.titles}>
-          <Titles title={"Earning Trust, Globally"} subTitle={""} />
+          <TitlesWithI title={"Earning Trust, Globally"} subTitle={""} />
         </div>
       </AnimatedContent>
       <div className={styles.recognition}>
@@ -62,7 +62,7 @@ const Recognition = () => {
       </div>
       <div className={styles.contribution}>
         <div>
-          <Titles title={"The Infosec Comic Podcast"} subTitle={"Exploring cybersecurity stories, hacks, and real-world insights."} />
+          <TitlesWithI title={"The Infosec Comic Podcast"} subTitle={"Exploring cybersecurity stories, hacks, and real-world insights."} />
         </div>
         <div className={styles.musicCardContainer}>
           <MusicCard />

@@ -45,7 +45,7 @@ const Skills = () => {
         />
       </div> */}
       <div className={styles.skillContent}>
-        <Titles title={'Who I am!'} subTitle={'Experience shows what I’ve done. Certifications prove I do it right.'} />
+        <Titles title={'Proof of Skill'} subTitle={'Experience shows what I’ve done. Certifications prove I do it right.'} />
 
         <div className={styles.skillsSection}>
           <div>

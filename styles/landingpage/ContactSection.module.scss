@@ -1,0 +1,65 @@
+.mainContainer {
+  margin-top: 2rem;
+  position: relative;
+  min-height: 85vh;
+
+  .darkVeil {
+    width: 100%;
+    height: 85vh;
+    position: absolute;
+    transform: rotate(180deg);
+    z-index: -9;
+  }
+
+  .credits {
+    position: absolute;
+    bottom: 2rem;
+    left: 3rem;
+
+    h2{
+      font-size: 0.85rem;
+    }
+
+    span {
+      color: #12d5bf;
+      font-weight: 600;
+    }
+  }
+}
+
+.container {
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  .leftContainer {
+    padding-top: 2rem;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      & > div {
+        display: flex;
+        gap: 1rem;
+
+        h2 {
+          font-size: 1.15rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    svg {
+      width: 1.75rem;
+      height: 1.75rem;
+      transition: 0.2s all;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

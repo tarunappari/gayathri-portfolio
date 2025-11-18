@@ -33,3 +33,34 @@ const Titles = ({title,subTitle}) => {
 };
 
 export default Titles;
+
+
+export const TitlesWithI = ({title,subTitle}) => {
+  return (
+    <div className={styles.mainTitles}>
+      <h2>
+        <i></i>
+        <Shuffle
+          text={title}
+          shuffleDirection="right"
+          duration={0.35}
+          animationMode="evenodd"
+          shuffleTimes={1}
+          ease="power3.out"
+          stagger={0.03}
+          threshold={0.1}
+          triggerOnce={true}
+          triggerOnHover={true}
+          respectReducedMotion={true}
+        />
+        <i></i>
+      </h2>
+      <DecryptedText
+        text={subTitle}
+        animateOn="view"
+        revealDirection="center"
+        className={styles.subTitle}
+      />
+    </div>
+  );
+};
